@@ -4,6 +4,15 @@ import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
 
 export const Hero = () => {
+
+  const imgStyle ={
+    borderRadius: '50%',
+    width: '447px', /* adjust the size as needed */
+    height: '459px', /* ensure height and width are equal for a perfect circle */
+    objectFit: 'cover', /* ensures the image covers the circle area */
+    overFlow: 'hidden'
+}
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -17,8 +26,9 @@ export const Hero = () => {
         </a>
       </div>
       <img
-        src={getImageUrl("hero/heroImage.png")}
-        alt="Hero image of me"
+      style={imgStyle}
+        src={getImageUrl("hero/realhero.jpg")}
+        alt="avatar image of me"
         className={styles.heroImg}
       />
       <div className={styles.topBlur} />

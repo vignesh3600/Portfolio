@@ -6,6 +6,11 @@ import { getImageUrl } from "../../utils";
 export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source },
 }) => {
+
+  const handleProjects = async() => {
+    alert('Under Construction')
+  }
+
   return (
     <div className={styles.container}>
       <img
@@ -25,10 +30,17 @@ export const ProjectCard = ({
         })}
       </ul>
       <div className={styles.links}>
-        <a href={demo} className={styles.link}>
+        {/* COMENTED BECAUSE PROJECTS ARE UNDER CONSTRUCTION */}
+        {/* <a href={demo} className={styles.link}>
           Demo
         </a>
         <a href={source} className={styles.link}>
+          Source
+        </a> */}
+        <a onClick={handleProjects} className={styles.link}>
+          Demo
+        </a>
+        <a onClick={handleProjects} className={styles.link}>
           Source
         </a>
       </div>
